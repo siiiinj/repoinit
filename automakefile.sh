@@ -4,7 +4,7 @@ rm -rf Makefile
 git clone git@github.com:Siiiinj/lib.git
 echo""
 echo "- Lib cloned"
-git clone git@github.com:Siiiinj/includes.git
+git clone git@github.com:Siiiinj/includes.git include
 echo "- Includes cloned"
 mkdir src
 echo "- Create src folder"
@@ -31,6 +31,7 @@ echo "NAME = $1" >> Makefile
 echo "" >> Makefile
 echo "all: \$(NAME)" >> Makefile
 echo "\$(NAME): \$(OBJ)" >> Makefile
+echo "		make -C ./lib/my"
 echo "		gcc -o \$(NAME) \$(OBJ) -L./lib -lmy" >> Makefile
 echo "" >> Makefile
 echo "clean:" >> Makefile
