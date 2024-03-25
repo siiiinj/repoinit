@@ -31,7 +31,7 @@ echo "NAME = $1" >> Makefile
 echo "" >> Makefile
 echo "all: \$(NAME)" >> Makefile
 echo "\$(NAME): \$(OBJ)" >> Makefile
-echo "		make -C ./lib/my"
+echo "		make -C ./lib/my" >> Makefile
 echo "		gcc -o \$(NAME) \$(OBJ) -L./lib -lmy" >> Makefile
 echo "" >> Makefile
 echo "clean:" >> Makefile
